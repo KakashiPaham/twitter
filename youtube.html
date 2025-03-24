@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 20px;
+            display: flex;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .search-button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+            border-radius: 0 20px 20px 0;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons button {
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 200px;
+            background-color: #fff;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            border-right: 1px solid #ccc;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .sidebar a:hover {
+            background-color: #eee;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            margin-left: 220px; /* Adjust to match sidebar width */
+            padding: 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .video-details {
+            padding: 10px;
+        }
+
+        .video-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .video-info {
+            color: #606060;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Telusuri">
+            <button class="search-button">🔍</button>
+        </div>
+        <div class="header-icons">
+            <button>➕</button>
+            <button>🔔</button>
+            <button>👤</button>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <a href="#">Beranda</a>
+        <a href="#">Shorts</a>
+        <a href="#">Subscription</a>
+        <a href="#">Histori</a>
+        <a href="#">Playlist</a>
+        <a href="#">Video Anda</a>
+        <a href="#">Tonton nanti</a>
+        <a href="#">Video yang disukai</a>
+        <hr>
+        <a href="#">Nex Carlos</a>
+        <a href="#">tanboy kun</a>
+        <a href="#">Dora-wa Dub</a>
+        <a href="#">GKDI Official</a>
+        <a href="#">Windah Basudara</a>
+        <a href="#">Maxhill Antimage</a>
+        <a href="#">OZZY NINJA CH...</a>
+        <a href="#">Trending</a>
+        <a href="#">Eksplorasi</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="video-grid">
+            <!-- Sample Video Cards -->
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-509-509-509-509-509" alt="Video Thumbnail">
+                <div class="video-details">
+                    <div class="video-title">Sample Video Title 1</div>
+                    <div class="video-info">
+                        Channel Name &middot; 1M views &middot; 1 year ago
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/21X5lGlD01c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-509-509-509-509-509" alt="Video Thumbnail">
+                <div class="video-details">
+                    <div class="video-title">Sample Video Title 2</div>
+                    <div class="video-info">
+                        Another Channel &middot; 500K views &middot; 6 months ago
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/31X5lGlD01c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-509-509-509-509-509" alt="Video Thumbnail">
+                <div class="video-details">
+                    <div class="video-title">Sample Video Title 3</div>
+                    <div class="video-info">
+                        Yet Another Channel &middot; 2M views &middot; 2 years ago
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/41X5lGlD01c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-509-509-509-509-509" alt="Video Thumbnail">
+                <div class="video-details">
+                    <div class="video-title">Sample Video Title 4</div>
+                    <div class="video-info">
+                        A Different Channel &middot; 750K views &middot; 1 year ago
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/51X5lGlD01c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-509-509-509-509-509" alt="Video Thumbnail">
+                <div class="video-details">
+                    <div class="video-title">Sample Video Title 5</div>
+                    <div class="video-info">
+                        Some Channel &middot; 1.5M views &middot; 8 months ago
+                    </div>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://i.ytimg.com/vi/61X5lGlD01c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-509-509-509-509-509" alt="Video Thumbnail">
+                <div class="video-details">
+                    <div class="video-title">Sample Video Title 6</div>
+                    <div class="video-info">
+                        Another Channel &middot; 900K views &middot; 3 months ago
+                    </div>
+                </div>
+            </div>
+            <!-- Add more video cards as needed -->
+        </div>
+    </main>
+
+</body>
+</html>
